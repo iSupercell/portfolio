@@ -58,17 +58,20 @@ h4,
 .scrollDown,
 .scrollUp,
 .skillIcons,
-.project,
+.portfolio,
+.myInfo,
 footer {
     text-align: center;
 }
 
 h1,
 h2,
-.skills h3,
-.skills i,
+.skills,
+.skills a,
+.skills .title,
 .iconName,
-.contact h3,
+.contact,
+.contact .title,
 a {
     color: #3E6B89;
 }
@@ -78,15 +81,20 @@ h3 {
     letter-spacing: 8px;
 }
 
+h4,
+header a:hover,
+header a:focus,
 .about h3,
 .about .headText,
-.portfolio h3,
-.about i,
 .about a,
-.portfolio i,
-.portfolio a,
-.scrollDown i:hover,
-.scrollUp i:focus {
+.skills a:hover,
+.skills a:focus,
+.portfolio h3,
+.portfolio .scrollDown a,
+.portfolio button,
+.devTools,
+.contact a:hover,
+.contact a:focus {
     color: #3DD2CC;
 }
 
@@ -97,12 +105,13 @@ p {
     margin: 0;
 }
 
-.profile p,
-.portfolio p,
-.about i:hover,
-.about i:focus,
+.profile,
+.portfolio,
+.portfolio .scrollDown a:hover,
+.portfolio .scrollDown a:focus,
 .about a:hover,
-.about a:focus {
+.about a:focus,
+.title {
     color: #F5F5F5;
 }
 
@@ -119,11 +128,13 @@ a,
 
 img {
     display: block;
+    max-width: 100%;
 }
 
 .bullet {
     background: #999;
     border-radius: 50%;
+    cursor: pointer;
     display: inline-block;
     height: 12px;
     margin: 10px 30px 10px 0;
@@ -131,10 +142,24 @@ img {
     transition: background 0.4s ease;
 }
 
-.bullet:hover,
-.bullet:focus,
-.bullet:active {
+.about .bullet:hover,
+.about .bullet:focus,
+.about .bullet:active,
+.portfolio .bullet:hover,
+.portfolio .bullet:focus,
+.portfolio .bullet:active,
+.activeOnDark {
     background: #3DD2CC;
+}
+
+.skills .bullet:hover,
+.skills .bullet:focus,
+.skills .bullet:active,
+.contact .bullet:hover,
+.contact .bullet:focus,
+.contact .bullet:active,
+.activeOnLight {
+    background: #3E6B89;
 }
 
 .wrapper {
@@ -158,12 +183,131 @@ img {
     }
 }
 
+.skills h3::after,
+.portfolio h3::after,
+.contact h3::after {
+    content: '';
+    display: block;
+    margin: 10px auto 0 auto;
+    width: 80px;
+}
+
+.contact .socials,
 .headerText,
 .aboutContent,
+.projectTitle,
+.toggleArrows,
 .sectionIndicator,
 .tableOfContent,
 .indicator {
     display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* ------------------------------ */
+/*    Social Media Nav Styling    */
+/* ------------------------------ */
+
+.socials li {
+    font-size: 2rem;
+    margin-top: 50px;
+    padding: 0 10px;
+}
+
+.socials p {
+    padding-top: 20px;
+}
+
+.socials i:hover,
+.socials i:focus {
+    rotate: 10deg;
+    transform: translateY(-20%);
+}
+
+.contact .socials {
+    position: relative;
+    justify-content: center;
+    margin: -20px 0 50px 0;
+    z-index: 1;
+}
+
+
+/* ------------------------------ */
+/*   Section Indicator Styling    */
+/* ------------------------------ */
+
+.sectionIndicator {
+    justify-content: space-between;
+    position: relative;
+    top: -50%;
+}
+
+.skills .sectionIndicator {
+    top: -38%;
+}
+
+.contact .sectionIndicator {
+    top: -42%;
+}
+
+.tableOfContent,
+.indicator {
+    flex-direction: column;
+}
+
+.num {
+    color: #999;
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0 0 100px 0;
+    position: relative;
+    left: 30px;
+}
+
+.portfolio .num {
+    left: 0;
+}
+
+.num::after {
+    border-left: 2px solid #999;
+    content: '';
+    height: 80px;
+    left: 45px;
+    position: absolute;
+    top: 80px;
+}
+
+.portfolio .num::after {
+    left: 65px;
+}
+
+.title {
+    left: 25px;
+    position: relative;
+    top: 100px;
+    transform: rotate(-90deg);
+}
+
+.skills .title {
+    left: 20px;
+}
+
+.portfolio .title {
+    left: -5px;
+    top: 120px;
+}
+
+.contact .title {
+    left: 14px;
+}
+
+.indicator {
+    position: relative;
+    top: 80px;
 }
 
 
@@ -182,14 +326,13 @@ img {
 }
 
 .mainNav a {
-    padding: 10px;
+    padding: 10px 15px;
 }
 
 .mainNav a:hover,
 .mainNav a:focus {
     background: #F5F5F5;
     border-bottom: 2px solid #3DD2CC;
-    color: #3DD2CC;
 }
 
 h1 {
@@ -253,74 +396,6 @@ header .scrollDown {
 }
 
 
-/* ------------------------------ */
-/*    Social Media Nav Styling    */
-/* ------------------------------ */
-
-.socials li {
-    font-size: 2rem;
-    margin-top: 50px;
-    padding: 0 10px;
-}
-
-.socials p {
-    padding-top: 20px;
-}
-
-.socials i:hover,
-.socials i:focus {
-    rotate: 10deg;
-    transform: translateY(-20%);
-}
-
-
-/* ------------------------------ */
-/*   Section Indicator Styling    */
-/* ------------------------------ */
-
-.sectionIndicator {
-    justify-content: space-between;
-    position: relative;
-    top: -50%;
-}
-
-.tableOfContent,
-.indicator {
-    flex-direction: column;
-}
-
-.num {
-    color: #999;
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 100px;
-    position: relative;
-    left: 30px;
-}
-
-.num::after {
-    border-left: 2px solid #999;
-    content: '';
-    height: 80px;
-    left: 45px;
-    position: absolute;
-    top: 80px;
-}
-
-.title {
-    color: #F5F5F5;
-    left: 25px;
-    position: relative;
-    top: 100px;
-    transform: rotate(-90deg);
-}
-
-.indicator {
-    position: relative;
-    top: 80px;
-}
-
-
 /* ----------------------------- */
 /*    Toolkit Section Styling    */
 /* ----------------------------- */
@@ -329,12 +404,9 @@ header .scrollDown {
     padding: 150px 0 80px 0;
 }
 
-.skills h3::after {
+.skills h3::after,
+.contact h3::after {
     border-bottom: 4px solid #3E6B89;
-    content: '';
-    display: block;
-    margin: 10px auto 0 auto;
-    width: 80px;
 }
 
 .skills i {
@@ -344,6 +416,7 @@ header .scrollDown {
 .skillIcons {
     flex-wrap: wrap;
     margin: 0 auto;
+    max-width: 100%;
     width: 800px;
 }
 
@@ -361,6 +434,210 @@ header .scrollDown {
     margin-top: -50px;
 }
 
-/* main blue: #3DD2CC */
-/* text blue: #3E6B89 */
-/* light: #F5F5F5 */
+
+/* ------------------------------- */
+/*    Portfolio Section Styling    */
+/* ------------------------------- */
+
+.portfolio h3 {
+    padding: 70px 0 50px 0;
+}
+
+.portfolio h3::after {
+    border-bottom: 4px solid #3DD2CC;
+}
+
+.projectContainer {
+    position: relative;
+}
+
+.project {
+    max-width: 100%;
+    width: 900px;
+}
+
+.project,
+.project img {
+    margin: 0 auto;
+}
+
+.projectTitle {
+    justify-content: center;
+}
+
+h4 {
+    font-size: 1.3rem;
+    margin: 40px 20px 0 0;
+}
+
+.project a {
+    background: #3DD2CC;
+    color: #000;
+    font-size: 0.8rem;
+    margin: 34px 10px 20px 0;
+    padding: 10px;
+    z-index: 10;
+}
+
+.project a i {
+    color: #000;
+}
+
+.project a:hover,
+.project a:focus {
+    background: #F5F5F5;
+}
+
+.devTools {
+    justify-content: center;
+    margin: 30px 0 50px 0;
+}
+
+.devTools li {
+    margin: 0 15px;
+}
+
+.devTools i {
+    font-size: 2.5rem;
+}
+
+.dash {
+    background: #999;
+    cursor: pointer;
+    height: 5px;
+    width: 25px;
+    display: inline-block;
+    margin: 10px;
+    transition: background 0.4s ease;
+}
+
+.dash:hover,
+.dash:focus,
+.dash:active,
+.dashActive {
+    background: #3DD2CC;
+}
+
+.toggleArrows {
+    justify-content: space-between;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    z-index: 9;
+}
+
+.arrowLeft,
+.arrowRight {
+    font-size: 4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.3s ease;
+}
+
+.arrowLeft:hover,
+.arrowLeft:focus,
+.arrowRight:hover,
+.arrowRight:focus {
+    color: #F5F5F5;
+    animation: hoverArrow 1.5s infinite linear;
+}
+
+@keyframes hoverArrow {
+    30% {
+        transform: translateX(10%);
+    }
+}
+
+.portfolio .scrollDown {
+    margin-top: -150px;
+}
+
+
+/* ----------------------------- */
+/*    Contact Section Styling    */
+/* ----------------------------- */
+
+.contact h3 {
+    padding: 80px 0 60px 0;
+}
+
+.myInfo {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 800px;
+}
+
+form {
+    margin: 0 auto;
+    max-width: 100%;
+    position: relative;
+    width: 800px;
+    z-index: 10;
+}
+
+.userInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+input,
+textarea {
+    background: #F5F5F5;
+    border: none;
+    border-bottom: 1px solid #3E6B89;
+    color: #3E6B89;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 10px;
+}
+
+input {
+    width: calc(98% / 2);
+}
+
+.subject {
+    width: 100%;
+}
+
+textarea {
+    height: 160px;
+    overflow: auto;
+    resize: none;
+    width: 100%;
+}
+
+form button {
+    background: #3E6B89;
+    border: none;
+    color: #F5F5F5;
+    cursor: pointer;
+    padding: 12px 40px;
+    transition: 0.3s;
+}
+
+form button:hover,
+form button:focus {
+    background: #3DD2CC;
+    color: #3E6B89;
+}
+
+.contact .scrollUp {
+    margin-top: -80px;
+}
+
+
+/* -------------------- */
+/*    Footer Styling    */
+/* -------------------- */
+
+footer {
+    background: #F5F5F5;
+    padding: 10px 0;
+}
+
+footer p {
+    font-size: 0.6rem;
+}
