@@ -8,6 +8,313 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 /* --------------------------------- */
 
-/* ---------------------- */
-/*    General Styling     */
-/* ---------------------- */
+/* --------------------- */
+/*    General Styling    */
+/* --------------------- */
+
+html {
+    font-size: 125%;
+}
+
+body,
+input,
+textarea {
+    font-family: 'Noto Serif', serif;
+}
+
+header,
+.skills,
+.contact {
+    background: url(./assets/lightPattern.png);
+    height: 100vh;
+}
+
+.about,
+.portfolio {
+    background: url(./assets/darkPattern.png);
+    height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+a,
+button,
+.headText,
+.title,
+.iconName,
+ul,
+footer {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+h3,
+h4,
+.headText,
+.scrollDown,
+.scrollUp,
+.skillIcons,
+.project,
+footer {
+    text-align: center;
+}
+
+h1,
+h2,
+.skills h3,
+.contact h3,
+a {
+    color: #3E6B89;
+}
+
+h3 {
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+}
+
+.about h3,
+.about .headText,
+.portfolio h3,
+.about i,
+.about a,
+.portfolio i,
+.portfolio a,
+.scrollDown i:hover,
+.scrollUp i:focus {
+    color: #3DD2CC;
+}
+
+p {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    line-height: 25px;
+    margin: 0;
+}
+
+.profile p,
+.portfolio p,
+.about i:hover,
+.about i:focus,
+.about a:hover,
+.about a:focus {
+    color: #F5F5F5;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+a,
+.socials i {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+img {
+    display: block;
+}
+
+.bullet {
+    background: #999;
+    border-radius: 50%;
+    display: inline-block;
+    height: 12px;
+    margin: 10px 30px 10px 0;
+    width: 12px;
+    transition: background 0.4s ease;
+}
+
+.bullet:hover,
+.bullet:focus,
+.bullet:active {
+    background: #3DD2CC;
+}
+
+.wrapper {
+    max-width: 1400px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.scrollDown i,
+.scrollUp i {
+    font-size: 3rem;
+    padding: 10px;
+    transition: 0.3s;
+    transform: translateY(0);
+    animation: hoverEffect 2.5s infinite linear;
+}
+
+@keyframes hoverEffect {
+    30% {
+        transform: translateY(30%);
+    }
+}
+
+.headerText,
+.aboutContent,
+.sectionIndicator,
+.tableOfContent,
+.indicator {
+    display: flex;
+}
+
+
+/* -------------------- */
+/*    Header Styling    */
+/* -------------------- */
+
+.mainNav ul {
+    font-size: 0.8rem;
+    justify-content: flex-end;
+    padding: 30px 0;
+}
+
+.mainNav li {
+    padding: 0 20px;
+}
+
+.mainNav a {
+    padding: 10px;
+}
+
+.mainNav a:hover,
+.mainNav a:focus {
+    background: #F5F5F5;
+    border-bottom: 2px solid #3DD2CC;
+    color: #3DD2CC;
+}
+
+h1 {
+    font-size: 5rem;
+    letter-spacing: 10px;
+    margin-top: 260px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    letter-spacing: 5.3px;
+}
+
+header .scrollDown {
+    margin: 16% auto 0 auto;
+}
+
+
+/* --------------------------- */
+/*    About Section Styling    */
+/* --------------------------- */
+
+.about {
+    padding: 180px 0 50px 0;
+    position: relative;
+}
+
+.aboutContent {
+    justify-content: center;
+}
+
+.profile {
+    margin-left: 50px;
+    width: 55%;
+}
+
+.profilePic {
+    width: auto;
+}
+
+.profile h3,
+.profile .headText {
+    text-align: left;
+}
+
+.profile .headText {
+    letter-spacing: 3px;
+    margin: 5px 0 30px 0;
+}
+
+.about .scrollDown {
+    margin-top: -30px;
+}
+
+
+/* ------------------------------ */
+/*    Social Media Nav Styling    */
+/* ------------------------------ */
+
+.socials li {
+    font-size: 2rem;
+    margin-top: 50px;
+    padding: 0 10px;
+}
+
+.socials p {
+    padding-top: 20px;
+}
+
+.socials i:hover,
+.socials i:focus {
+    rotate: 10deg;
+    transform: translateY(-20%);
+}
+
+
+/* ------------------------------ */
+/*   Section Indicator Styling    */
+/* ------------------------------ */
+
+.sectionIndicator {
+    justify-content: space-between;
+    position: relative;
+    top: -50%;
+}
+
+.tableOfContent,
+.indicator {
+    flex-direction: column;
+}
+
+.num {
+    color: #999;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 100px;
+    position: relative;
+    left: 30px;
+}
+
+.num::after {
+    border-left: 2px solid #999;
+    content: '';
+    height: 80px;
+    left: 45px;
+    position: absolute;
+    top: 80px;
+}
+
+.title {
+    color: #F5F5F5;
+    left: 25px;
+    position: relative;
+    top: 100px;
+    transform: rotate(-90deg);
+}
+
+.indicator {
+    position: relative;
+    top: 80px;
+}
+
+
+/* ----------------------------- */
+/*    Toolkit Section Styling    */
+/* ----------------------------- */
+
+/* main blue: #3DD2CC */
+/* text blue: #3E6B89 */
+/* light: #F5F5F5 */
