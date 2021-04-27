@@ -66,6 +66,8 @@ footer {
 h1,
 h2,
 .skills h3,
+.skills i,
+.iconName,
 .contact h3,
 a {
     color: #3E6B89;
@@ -229,13 +231,21 @@ header .scrollDown {
 }
 
 .profile h3,
-.profile .headText {
+.headText {
     text-align: left;
 }
 
-.profile .headText {
+.headText {
     letter-spacing: 3px;
-    margin: 5px 0 30px 0;
+    margin: 5px 0 40px 0;
+}
+
+.headText::after {
+    border-bottom: 4px solid #3DD2CC;
+    content: '';
+    display: block;
+    margin-top: 10px;
+    width: 80px;
 }
 
 .about .scrollDown {
@@ -314,6 +324,42 @@ header .scrollDown {
 /* ----------------------------- */
 /*    Toolkit Section Styling    */
 /* ----------------------------- */
+
+.skills h3 {
+    padding: 150px 0 80px 0;
+}
+
+.skills h3::after {
+    border-bottom: 4px solid #3E6B89;
+    content: '';
+    display: block;
+    margin: 10px auto 0 auto;
+    width: 80px;
+}
+
+.skills i {
+    font-size: 3rem;
+}
+
+.skillIcons {
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 800px;
+}
+
+.skillIcons li {
+    margin: 0 auto;
+    padding: 20px;
+    width: 170px;
+}
+
+.skillIcons p {
+    margin-top: 10px;
+}
+
+.skills .scrollDown {
+    margin-top: -50px;
+}
 
 /* main blue: #3DD2CC */
 /* text blue: #3E6B89 */
