@@ -509,6 +509,7 @@ header .scrollDown {
 
 .projectTitle {
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 h4 {
@@ -516,13 +517,17 @@ h4 {
     margin: 40px 20px 0 0;
 }
 
+.links {
+    margin: 40px 0 0 20px;
+    z-index: 10;
+}
+
 .project a {
     background: #3DD2CC;
     color: #000;
     font-size: 0.8rem;
-    margin: 34px 10px 20px 0;
+    margin: 0 5px;
     padding: 10px;
-    z-index: 10;
 }
 
 .project a i {
@@ -795,23 +800,198 @@ footer p {
     .about {
         padding-top: 230px;
     }
+
+    .arrowLeft {
+        margin-left: 0;
+    }
+
+    .arrowRight {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1090px) {
+    .about .tableOfContent {
+        top: -383px;
+    }
+    
+    .portfolio .tableOfContent {
+        top: -261px;
+    }
+    
+    .about .indicator {
+        top: -70px;
+    }
+    
+    .portfolio .indicator {
+        top: 52px;
+    }
+    
+    .about {
+        padding-top: 200px;
+    }
+
+    .profile {
+        width: 450px;
+    }
+
+    .about .scrollDown {
+        margin-top: -40px;
+    }
+
+    .project {
+        max-width: 100%;
+        width: 700px;
+    }
+    
+    .project img {
+        width: 80%;
+    }
+
+    .projectTitle {
+        margin-top: 60px;
+    }
+
+    .toggleArrows {
+        justify-content: center;
+        top: 255px;
+    }
+
+    .arrowLeft,
+    .arrowRight {
+        font-size: 3.4rem;
+        margin: 0 20px;
+    }
+
+    .portfolio .scrollDown {
+        margin-top: -140px;
+    }
 }
 
 @media (max-width: 950px) {
+    h1,
+    h2 {
+        text-align: center;
+    }
+
     .mainNav ul {
         justify-content: center;
+    }
+
+    .sectionIndicator {
+        display: none;
+    }
+
+    .about,
+    .portfolio {
+        height: auto
+    }
+
+    .aboutContent {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about {
+        padding-top: 100px;
+    }
+    
+    .profile {
+        margin: 30px 0 0 0;
+        width: 800px;
+    }
+
+    .profile h3,
+    .headText {
+        text-align: center;
+    }
+
+    p.headText {
+        margin-bottom: 50px;
+    }
+
+    .headText::after {
+        margin: 10px auto 0 auto;
+    }
+
+    .profilePic {
+        width: auto;
+    }
+
+    .about .scrollDown {
+        margin-top: 20px;
+    }
+
+    .skills .scrollDown {
+        margin-top: 100px;
+    }
+
+    .portfolio h3 {
+        padding: 100px 0 60px 0;
+    }
+
+    .project img {
+        width: 100%;
+    }
+
+    .projectTitle {
+        margin-top: 80px;
+    }
+
+    .toggleArrows {
+        top: 330px;
+    }
+
+    .portfolio .scrollDown {
+        margin-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    .contact .scrollUp {
+        margin-top: 80px;
     }
 }
 
 @media (max-width: 773px) {
     h1 {
         font-size: 4rem;
-        text-align: center;
+        padding-top: 350px;
     }
     
     h2 {
         font-size: 1.75rem;
-        text-align: center;
+    }
+
+    header .scrollDown {
+        margin-top: 240px;
+    }
+
+    .skills h3 {
+        padding: 100px 0 60px 0;
+    }
+
+    .skills .scrollDown {
+        margin-top: 20px;
+    }
+
+    h4 {
+        margin: 30px 0 0 0;
+    }
+
+    .project img {
+        width: 550px;
+    }
+    
+    .projectTitle {
+        flex-direction: column;
+    }
+
+    .links {
+        margin: 30px 0 0px 0;
+    }
+
+    .toggleArrows {
+        top: 260px;
     }
 }
 
@@ -826,6 +1006,10 @@ footer p {
 
     .mainNav ul {
         display: none;
+    }
+
+    header .scrollDown {
+        margin-top: 350px;
     }
 
     .hamburger {
