@@ -22,17 +22,19 @@ textarea {
     font-family: 'Noto Serif', serif;
 }
 
+header {
+    height: 100vh;
+}
+
 header,
 .skills,
 .contact {
     background: url(./assets/lightPattern.png);
-    height: 100vh;
 }
 
 .about,
 .portfolio {
     background: url(./assets/darkPattern.png);
-    height: 100vh;
 }
 
 h1,
@@ -250,22 +252,32 @@ img {
 
 .sectionIndicator {
     justify-content: space-between;
-    position: relative;
-    top: -50%;
     width: 100%;
-}
-
-.skills .sectionIndicator {
-    top: -38%;
-}
-
-.contact .sectionIndicator {
-    top: -42%;
 }
 
 .tableOfContent,
 .indicator {
     flex-direction: column;
+}
+
+.about .tableOfContent {
+    position: relative;
+    top: -360px;
+}
+
+.skills .tableOfContent {
+    position: relative;
+    top: -380px;
+}
+
+.portfolio .tableOfContent {
+    position: relative;
+    top: -490px;
+}
+
+.contact .tableOfContent {
+    position: relative;
+    top: -425px;
 }
 
 .num {
@@ -315,7 +327,19 @@ img {
 
 .indicator {
     position: relative;
-    top: 80px;
+    top: -295px;
+}
+
+.skills .indicator {
+    top: -310px;
+}
+
+.portfolio .indicator {
+    top: -410px;
+}
+
+.contact .indicator {
+    top: -355px;
 }
 
 
@@ -401,8 +425,7 @@ header .scrollDown {
 /* --------------------------- */
 
 .about {
-    padding: 180px 0 50px 0;
-    position: relative;
+    padding: 130px 0 0px 0;
 }
 
 .aboutContent {
@@ -441,13 +464,18 @@ header .scrollDown {
     width: 80px;
 }
 
+.about .scrollDown {
+    margin-top: -100px;
+    padding-bottom: 50px;
+}
+
 
 /* ----------------------------- */
 /*    Toolkit Section Styling    */
 /* ----------------------------- */
 
 .skills h3 {
-    padding: 150px 0 80px 0;
+    padding: 100px 0 80px 0;
 }
 
 .skills h3::after,
@@ -477,7 +505,8 @@ header .scrollDown {
 }
 
 .skills .scrollDown {
-    margin-top: -30px;
+    margin-top: -100px;
+    padding-bottom: 50px;
 }
 
 
@@ -486,7 +515,7 @@ header .scrollDown {
 /* ------------------------------- */
 
 .portfolio h3 {
-    padding: 70px 0 50px 0;
+    padding: 100px 0 50px 0;
 }
 
 .portfolio h3::after {
@@ -603,6 +632,7 @@ h4 {
 
 .portfolio .scrollDown {
     margin-top: -120px;
+    padding-bottom: 50px;
 }
 
 
@@ -611,7 +641,7 @@ h4 {
 /* ----------------------------- */
 
 .contact h3 {
-    padding: 80px 0 60px 0;
+    padding: 100px 0 60px 0;
 }
 
 .myInfo {
@@ -676,7 +706,8 @@ form button:focus {
 }
 
 .contact .scrollUp {
-    margin-top: -50px;
+    margin-top: -110px;
+    padding-bottom: 50px;
 }
 
 
@@ -708,61 +739,47 @@ footer p {
         width: 28%;
     }
 
-    .about .sectionIndicator {
-        top: -35%;
+    .tableOfContent {
+        margin-left: 20px;
     }
 
-    .num {
-        left: 30px;
-    }
-    
-    .portfolio .num {
-        left: 4px;
+    .about .tableOfContent {
+        top: -340px;
     }
 
-    .title {
-        left: 25px;
+    .portfolio .tableOfContent {
+        top: -495px;
     }
-    
-    .skills .title {
-        left: 17px;
-    }
-    
-    .portfolio .title {
-        left: -4px;
-    }
-    
-    .contact .title {
-        left: 15px;
+
+    .indicator {
+        top: -275px;
     }
 
     .arrowLeft {
-        margin-left: 60px;
+        margin-left: 30px;
     }
 
     .arrowRight {
-        margin-right: 60px;
+        margin-right: 30px;
     }
 }
 
 @media (max-width: 1230px) {
-    .tableOfContent {
-        left: 30px;
-        position: relative;
-        top: -350px;
+    .about .tableOfContent {
+        top: -346px;
     }
 
     .skills .tableOfContent {
-        top: -268px;
+        top: -372px;
     }
 
     .portfolio .tableOfContent {
-        left: 56px;
-        top: -243px;
+        margin-left: 10px;
+        top: -487px;
     }
 
     .contact .tableOfContent {
-        top: -239px;
+        top: -422px;
     }
 
     .num {
@@ -770,73 +787,49 @@ footer p {
     }
 
     .num::after {
-        display: none;
+        left: 32px;
+        top: 60px;
     }
 
     .title {
-        display: none;
+        left: -18px;
+        top: 80px;
+    }
+
+    .skills .title {
+        left: -25px;
+    }
+
+    .portfolio .title {
+        top: 100px;
+    }
+
+    .contact .title {
+        left: -28px;
+        top: 90px;
     }
 
     .indicator {
-        top: -35px;
+        top: -288px;
     }
 
-    .skills .indicator {
-        top: 45px;
-    }
-
-    .portfolio .indicator {
-        top: 71px;
-    }
-
-    .contact .indicator {
-        top: 75px;
-    }
-
-    .profilePic {
-        margin-left: 0;
-    }
-
-    .about {
-        padding-top: 230px;
-    }
-
-    .arrowLeft {
-        margin-left: 0;
-    }
-
-    .arrowRight {
-        margin-right: 0;
+    .profile {
+        margin-left: 30px;
+        width: 550px;
     }
 }
 
 @media (max-width: 1090px) {
-    .about .tableOfContent {
-        top: -383px;
-    }
-    
     .portfolio .tableOfContent {
-        top: -261px;
+        top: -495px;
     }
-    
-    .about .indicator {
-        top: -70px;
-    }
-    
+
     .portfolio .indicator {
-        top: 52px;
-    }
-    
-    .about {
-        padding-top: 200px;
+        top: -418px;
     }
 
     .profile {
-        width: 450px;
-    }
-
-    .about .scrollDown {
-        margin-top: -40px;
+        width: 500px;
     }
 
     .project {
@@ -863,8 +856,9 @@ footer p {
         margin: 0 20px;
     }
 
-    .portfolio .scrollDown {
-        margin-top: -140px;
+    .myInfo,
+    form {
+        width: 650px;
     }
 }
 
@@ -880,11 +874,6 @@ footer p {
 
     .sectionIndicator {
         display: none;
-    }
-
-    .about,
-    .portfolio {
-        height: auto
     }
 
     .aboutContent {
@@ -908,6 +897,10 @@ footer p {
 
     p.headText {
         margin-bottom: 50px;
+    }
+
+    .profilePic {
+        margin-left: 0;
     }
 
     .headText::after {
@@ -944,7 +937,11 @@ footer p {
 
     .portfolio .scrollDown {
         margin-top: 20px;
-        padding-bottom: 50px;
+    }
+
+    .myInfo,
+    form {
+        width: 800px;
     }
 
     .contact .scrollUp {
@@ -967,7 +964,7 @@ footer p {
     }
 
     .skills h3 {
-        padding: 100px 0 60px 0;
+        padding-bottom: 60px;
     }
 
     .skills .scrollDown {
@@ -1031,7 +1028,7 @@ footer p {
     }
 
     .skills .scrollDown {
-        margin-top: 100px;
+        margin-top: 50px;
     }
 
     .project img {
@@ -1084,10 +1081,6 @@ footer p {
     h2 {
         font-size: 0.88rem;
     }
-
-    .contact .scrollUp {
-        margin-top: 0;
-    }
 }
 
 @media (max-width: 491px) {
@@ -1119,7 +1112,7 @@ footer p {
     }
 
     .skills .scrollDown {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     .project img {
@@ -1171,77 +1164,37 @@ footer p {
 }
 
 @media (min-height: 1280px) {
-    header,
-    .skills,
-    .contact {
-        height: 80vh;
+    header {
+        height: auto;
     }
 
-    h1 {
-        padding-top: 310px;
-    }
-
-    .skills .scrollDown {
-        margin-top: 180px;
-    }
-
-    .contact .scrollUp {
-        margin-top: 180px;
-    }
-}
-
-@media (max-height: 1024px) {
     header .scrollDown {
-        margin-top: 300px;
-    }
-
-    .skills .scrollDown {
-        margin-top: 230px;
-    }
-
-    .contact .scrollUp {
-        margin-top: 150px;
+        margin-top: 240px;
+        padding-bottom: 50px;
     }
 }
 
 @media (max-height: 900px) {
-    header .scrollDown {
-        margin-top: 250px;
-    }
-
-    .about .scrollDown {
-        margin-top: -20px;
-    }
-
-    .skills .scrollDown {
-        margin-top: -90px;
-    }
-
-    .portfolio {
-        height: 106vh;
-    }
-
-    .portfolio .scrollDown {
-        margin-top: -150px;
-    }
-
-    .contact .scrollUp {
-        margin-top: -100px;
-    }
-}
-
-/* @media (max-height: 1050px) {
-    header,
-    .skills,
-    .contact {
-        height: 90vh;
+    header {
+        height: auto;
     }
 
     h1 {
-        padding-top: 310px;
+        padding-top: 240px;
     }
 
-    .skills .scrollDown {
-        margin-top: 130px;
+    header .scrollDown {
+        margin-top: 200px;
+        padding-bottom: 50px;
     }
-} */
+}
+
+@media (max-height: 420px) {
+    h1 {
+        padding-top: 40px;
+    }
+
+    header .scrollDown {
+        margin-top: 20px;
+    }
+}
