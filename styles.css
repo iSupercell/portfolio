@@ -54,6 +54,7 @@ footer {
 
 h3,
 h4,
+.mobileNav a,
 .headText,
 .scrollDown,
 .scrollUp,
@@ -163,8 +164,14 @@ img {
 }
 
 .wrapper {
-    max-width: 1400px;
-    width: 80%;
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.outerWrapper {
+    max-width: 1500px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -192,6 +199,7 @@ img {
     width: 80px;
 }
 
+.mobileNav,
 .contact .socials,
 .headerText,
 .aboutContent,
@@ -214,7 +222,7 @@ img {
 
 .socials li {
     font-size: 2rem;
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 0 10px;
 }
 
@@ -231,7 +239,7 @@ img {
 .contact .socials {
     position: relative;
     justify-content: center;
-    margin: -20px 0 50px 0;
+    margin-bottom: 50px;
     z-index: 1;
 }
 
@@ -244,6 +252,7 @@ img {
     justify-content: space-between;
     position: relative;
     top: -50%;
+    width: 100%;
 }
 
 .skills .sectionIndicator {
@@ -265,11 +274,10 @@ img {
     font-weight: bold;
     margin: 0 0 100px 0;
     position: relative;
-    left: 30px;
 }
 
 .portfolio .num {
-    left: 0;
+    left: -25px;
 }
 
 .num::after {
@@ -286,28 +294,65 @@ img {
 }
 
 .title {
-    left: 25px;
+    left: -5px;
     position: relative;
     top: 100px;
     transform: rotate(-90deg);
 }
 
 .skills .title {
-    left: 20px;
+    left: -12px;
 }
 
 .portfolio .title {
-    left: -5px;
+    left: -32px;
     top: 120px;
 }
 
 .contact .title {
-    left: 14px;
+    left: -16px;
 }
 
 .indicator {
     position: relative;
     top: 80px;
+}
+
+
+/* ------------------------ */
+/*    Mobile Nav Styling    */
+/* ------------------------ */
+
+.hamburger {
+    display: none;
+    position: relative;
+}
+
+.menuIcon {
+    color: #3E6B89;
+    font-size: 1.8rem;
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+.mobileNav {
+    background: #F5F5F5;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    transition: 0.2s;
+    width: 150px;
+}
+
+.mobileNav a {
+    border-bottom: 1px solid #3E6B89;
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    padding: 10px;
+    width: 100%;
 }
 
 
@@ -338,7 +383,7 @@ img {
 h1 {
     font-size: 5rem;
     letter-spacing: 10px;
-    margin-top: 260px;
+    padding-top: 260px;
 }
 
 h2 {
@@ -347,7 +392,7 @@ h2 {
 }
 
 header .scrollDown {
-    margin: 16% auto 0 auto;
+    margin-top: 300px;
 }
 
 
@@ -366,7 +411,12 @@ header .scrollDown {
 
 .profile {
     margin-left: 50px;
-    width: 55%;
+    max-width: 100%;
+    width: 750px;
+}
+
+.profile p {
+    margin-bottom: 20px;
 }
 
 .profilePic {
@@ -389,10 +439,6 @@ header .scrollDown {
     display: block;
     margin-top: 10px;
     width: 80px;
-}
-
-.about .scrollDown {
-    margin-top: -30px;
 }
 
 
@@ -431,7 +477,7 @@ header .scrollDown {
 }
 
 .skills .scrollDown {
-    margin-top: -50px;
+    margin-top: -30px;
 }
 
 
@@ -453,7 +499,7 @@ header .scrollDown {
 
 .project {
     max-width: 100%;
-    width: 900px;
+    width: 780px;
 }
 
 .project,
@@ -551,7 +597,7 @@ h4 {
 }
 
 .portfolio .scrollDown {
-    margin-top: -150px;
+    margin-top: -120px;
 }
 
 
@@ -625,7 +671,7 @@ form button:focus {
 }
 
 .contact .scrollUp {
-    margin-top: -80px;
+    margin-top: -50px;
 }
 
 
@@ -640,4 +686,169 @@ footer {
 
 footer p {
     font-size: 0.6rem;
+}
+
+
+/* ------------------- */
+/*    Media Queries    */
+/* ------------------- */
+
+@media (max-width: 1546px) {
+    .profile {
+        width: 600px;
+    }
+
+    .profilePic {
+        margin-left: 30px;
+        width: 28%;
+    }
+
+    .about .sectionIndicator {
+        top: -35%;
+    }
+
+    .num {
+        left: 30px;
+    }
+    
+    .portfolio .num {
+        left: 4px;
+    }
+
+    .title {
+        left: 25px;
+    }
+    
+    .skills .title {
+        left: 17px;
+    }
+    
+    .portfolio .title {
+        left: -4px;
+    }
+    
+    .contact .title {
+        left: 15px;
+    }
+
+    .arrowLeft {
+        margin-left: 60px;
+    }
+
+    .arrowRight {
+        margin-right: 60px;
+    }
+}
+
+@media (max-width: 1230px) {
+    .tableOfContent {
+        left: 30px;
+        position: relative;
+        top: -350px;
+    }
+
+    .skills .tableOfContent {
+        top: -268px;
+    }
+
+    .portfolio .tableOfContent {
+        left: 56px;
+        top: -243px;
+    }
+
+    .contact .tableOfContent {
+        top: -239px;
+    }
+
+    .num {
+        font-size: 3rem;
+    }
+
+    .num::after {
+        display: none;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .indicator {
+        top: -35px;
+    }
+
+    .skills .indicator {
+        top: 45px;
+    }
+
+    .portfolio .indicator {
+        top: 71px;
+    }
+
+    .contact .indicator {
+        top: 75px;
+    }
+
+    .profilePic {
+        margin-left: 0;
+    }
+
+    .about {
+        padding-top: 230px;
+    }
+}
+
+@media (max-width: 950px) {
+    .mainNav ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 773px) {
+    h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 644px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .mainNav ul {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (max-width: 515px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 386px) {
+    h1 {
+        letter-spacing: 2px;
+    }
+    
+    h2 {
+        letter-spacing: 2px;
+    }
 }
