@@ -352,7 +352,7 @@
                         </ul>
                     </nav>
                 </div>
-                <form action="#" method="POST" class="contactForm" name="contactForm">
+                <form action="#" method="POST" class="contactForm" name="contactForm" data-netlify="true" data-netlify-recaptcha="true">
                     <div class="userInfo">
                         <label for="userName" class="sr-only">Your Name:</label>
                         <input type="text" id="userName" name="userName" placeholder="First & last name" required>
@@ -363,6 +363,7 @@
                     <input type="text" id="subject" name="subject" class="subject" placeholder="Subject (Optional)">
                     <label for="userMessage" class="sr-only">Your message:</label>
                     <textarea id="userMessage" name="userMessage" placeholder="Message" required></textarea>
+                    <div data-netlify-recaptcha="true"></div>
                     <button type="submit">Send</button>
                 </form>
             </div>
