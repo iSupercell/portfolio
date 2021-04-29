@@ -33,8 +33,12 @@
             </nav>
             <!-- Mobile Nav codes start HERE! -->
             <nav class="hamburger">
-                <label for="menu"><i class="fas fa-bars menuIcon" aria-label="menu"></i></label>
-                <ul class="mobileNav hide">
+                <button class="menu">
+                    <span class="sr-only">Click to open mobile navigation.</span>
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+
+                <ul class="mobileNav">
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Toolkit</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
@@ -173,7 +177,7 @@
         <section class="portfolio" id="portfolio">
             <h3>My portfolio</h3>
             <div class="projectContainer wrapper">
-                <div class="project">
+                <div class="project fade show">
                     <img src="https://via.placeholder.com/650x300" alt="projectName">
                     <div class="projectTitle">
                         <h4>Quarantine Pursuit</h4>
@@ -197,15 +201,15 @@
                         </li>
                     </ul>
                 </div>
-                <div class="project hide">
-                    <img src="https://via.placeholder.com/750x400/000" alt="projectName">
+                <div class="project fade hide">
+                    <img src="https://via.placeholder.com/650x300/000" alt="projectName">
                     <div class="projectTitle">
                         <h4>Poke-Flip!</h4>
                         <div class="links">
                             <a href="https://github.com/shanel-and-si-jia/pokeFlipApp"><i class="fab fa-github" aria-hidden="true"></i> Github</a> <a href="https://poke-flip.netlify.app/"><i class="fas fa-globe" aria-hidden="true"></i> Live site</a>
                         </div>
                     </div>
-                    <p>A memory card game with 3 difficulty levels that usesthe Pokemon API to generate images and names for thecards. Fully responsive and accessibility friendly.</p>
+                    <p>A memory card game with 3 difficulty levels that uses the Pokemon API to generate images and names of the cards. Fully responsive and accessibility friendly.</p>
                     <ul class="devTools">
                         <li>
                             <i class="fab fa-html5" aria-hidden="true"></i>
@@ -225,15 +229,15 @@
                         </li>
                     </ul>
                 </div>
-                <div class="project hide">
-                    <img src="https://via.placeholder.com/750x400/fff" alt="projectName">
+                <div class="project fade hide">
+                    <img src="https://via.placeholder.com/650x300/fff" alt="projectName">
                     <div class="projectTitle">
                         <h4>My Movie Database</h4>
                         <div class="links">
                             <a href="https://github.com/MSTRobort/myMovieDatabase"><i class="fab fa-github" aria-hidden="true"></i> Github</a> <a href="https://mymovie-database.netlify.app/"><i class="fas fa-globe" aria-hidden="true"></i> Live site</a>
                         </div>
                     </div>
-                    <p>An application that allows users to search up a moviefrom an API to create their own watch list. It employsFirebase as a real-time database to store a list of movies.</p>
+                    <p>An application that allows users to search up a movie from an API to create their own watch list. It employs Firebase as a real-time database to store a list of movies.</p>
                     <ul class="devTools">
                         <li>
                             <i class="fab fa-react" aria-hidden="true"></i>
@@ -249,8 +253,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="project hide">
-                    <img src="https://via.placeholder.com/750x400/red" alt="projectName">
+                <div class="project fade hide">
+                    <img src="https://via.placeholder.com/650x300/red" alt="projectName">
                     <div class="projectTitle">
                         <h4>Apple Pie!</h4>
                         <div class="links">
@@ -273,8 +277,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="project hide">
-                    <img src="https://via.placeholder.com/750x400/blu" alt="projectName">
+                <div class="project fade hide">
+                    <img src="https://via.placeholder.com/650x300/blu" alt="projectName">
                     <div class="projectTitle">
                         <h4>PSD Design Conversion</h4>
                         <div class="links">
@@ -298,7 +302,7 @@
                     </ul>
                 </div>
                 <div class="projectIndicator">
-                    <span class="dash"></span>
+                    <span class="dash dashActive"></span>
                     <span class="dash"></span>
                     <span class="dash"></span>
                     <span class="dash"></span>
