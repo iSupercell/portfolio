@@ -14,6 +14,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 html {
     font-size: 125%;
+    scroll-behavior: smooth;
 }
 
 body,
@@ -24,6 +25,7 @@ textarea {
 
 header {
     height: 100vh;
+    overflow-x: hidden;
 }
 
 header,
@@ -217,6 +219,10 @@ img {
     display: none;
 }
 
+.show {
+    display: block;
+}
+
 
 /* ------------------------------ */
 /*    Social Media Nav Styling    */
@@ -352,21 +358,33 @@ img {
     position: relative;
 }
 
-.menuIcon {
+.menu {
+    background: none;
+    border: none;
     color: #3E6B89;
+    cursor: pointer;
     font-size: 1.8rem;
+    outline: none;
     position: absolute;
     right: 0;
     top: 20px;
+    transition: 0.3s;
+}
+
+.menu:hover,
+.menu:focus {
+    color: #3DD2CC;
 }
 
 .mobileNav {
     background: #F5F5F5;
     flex-direction: column;
+    opacity: 0;
     position: absolute;
-    right: 0;
-    top: 60px;
-    transition: 0.2s;
+    top: 70px;
+    right: -100%;
+    transition: all 400ms ease-in-out 0s;
+    visibility: hidden;
     width: 150px;
 }
 
@@ -377,6 +395,12 @@ img {
     letter-spacing: 2px;
     padding: 10px;
     width: 100%;
+}
+
+.activeMenu {
+    opacity: 1;
+    right: 0;
+    visibility: visible;
 }
 
 
@@ -587,6 +611,11 @@ h4 {
     z-index: 10;
 }
 
+.project p {
+    display: block;
+    height: 105px;
+}
+
 .project a {
     background: #3DD2CC;
     color: #000;
@@ -664,6 +693,19 @@ h4 {
     30% {
         transform: translateX(10%);
     }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade {
+    animation: fade 0.6s both;
 }
 
 .portfolio .scrollDown {
