@@ -415,6 +415,42 @@ h2 {
     letter-spacing: 5.3px;
 }
 
+.imgContainer1,
+.imgContainer2 {
+    position: relative;
+}
+
+.shiba {
+    bottom: -20px;
+    left: 750px;
+    position: absolute;
+    animation: wavingEffect 2s infinite linear;
+}
+
+.sparkle {
+    bottom: 140px;
+    left: 700px;
+    position: absolute;
+    transform: rotate(-20deg);
+    width: 100px;
+    animation: flashingEffect 2s infinite;
+}
+
+@keyframes wavingEffect {
+    30% {
+        transform: rotate(10deg);
+    }
+    60% {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes flashingEffect {
+    30% {
+        opacity: 0;
+    }
+}
+
 header .scrollDown {
     margin-top: 300px;
 }
@@ -819,6 +855,20 @@ footer p {
     }
 }
 
+@media (max-width: 1055px) {
+    .shiba {
+        bottom: 15px;
+        left: 720px;
+        width: 150px;
+    }
+
+    .sparkle {
+        bottom: 120px;
+        left: 690px;
+        width: 60px;
+    }
+}
+
 @media (max-width: 1090px) {
     .portfolio .tableOfContent {
         top: -495px;
@@ -868,8 +918,34 @@ footer p {
         text-align: center;
     }
 
+    h1 {
+        padding-top: 330px;
+    }
+
     .mainNav ul {
         justify-content: center;
+    }
+
+    .shiba,
+    .sparkle {
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .shiba {
+        bottom: 390px;
+        left: 0;
+        width: auto;
+    }
+
+    .sparkle {
+        bottom: 640px;
+        left: -120px;
+        width: 100px;
+    }
+
+    header .scrollDown {
+        margin-top: -85px;
     }
 
     .sectionIndicator {
@@ -959,8 +1035,17 @@ footer p {
         font-size: 1.75rem;
     }
 
+    .shiba {
+        bottom: 350px;
+        width: auto;
+    }
+
+    .sparkle {
+        bottom: 600px;
+    }
+
     header .scrollDown {
-        margin-top: 240px;
+        margin-top: -75px;
     }
 
     .skills h3 {
@@ -995,6 +1080,7 @@ footer p {
 @media (max-width: 644px) {
     h1 {
         font-size: 3rem;
+        padding-top: 420px;
     }
     
     h2 {
@@ -1005,8 +1091,19 @@ footer p {
         display: none;
     }
 
+    .shiba {
+        bottom: 280px;
+        width: 180px;
+    }
+
+    .sparkle {
+        bottom: 480px;
+        left: -100px;
+        width: 80px;
+    }
+
     header .scrollDown {
-        margin-top: 350px;
+        margin-top: 28px;
     }
 
     .hamburger {
@@ -1081,6 +1178,21 @@ footer p {
     h2 {
         font-size: 0.88rem;
     }
+
+    .shiba {
+        bottom: 230px;
+        width: 160px;
+    }
+
+    .sparkle {
+        bottom: 400px;
+        left: -85px;
+        width: 60px;
+    }
+
+    header .scrollDown {
+        margin-top: 100px;
+    }
 }
 
 @media (max-width: 491px) {
@@ -1151,6 +1263,21 @@ footer p {
     h2 {
         letter-spacing: 2px;
     }
+
+    .shiba {
+        bottom: 190px;
+        width: 120px;
+    }
+
+    .sparkle {
+        bottom: 320px;
+        left: -65px;
+        width: 50px;
+    }
+
+    header .scrollDown {
+        margin-top: 150px;
+    }
 }
 
 @media (max-width: 370px) {
@@ -1163,13 +1290,19 @@ footer p {
     }
 }
 
+/* Media Queries based on vh */
+
 @media (min-height: 1280px) {
     header {
         height: auto;
     }
 
+    h1 {
+        margin-top: 50px;
+    }
+
     header .scrollDown {
-        margin-top: 240px;
+        margin-top: 0px;
         padding-bottom: 50px;
     }
 }
@@ -1178,23 +1311,75 @@ footer p {
     header {
         height: auto;
     }
-
+    
     h1 {
-        padding-top: 240px;
+        padding-top: 200px;
     }
-
+    
     header .scrollDown {
         margin-top: 200px;
         padding-bottom: 50px;
     }
 }
 
-@media (max-height: 420px) {
+@media (max-height: 850px) and (min-height: 801px) {
     h1 {
-        padding-top: 40px;
+        padding-top: 300px;
     }
 
     header .scrollDown {
-        margin-top: 20px;
+        margin-top: 0;
+    }
+}
+
+@media (max-height: 768px) {
+    h1 {
+        padding-top: 180px;
+    }
+
+    header .scrollDown {
+        margin-top: 150px;
+    }
+}
+
+@media (max-height: 760px) {
+    header {
+        height: auto;
+    }
+    
+    h1 {
+        padding-top: 300px;
+    }
+    
+    header .scrollDown {
+        margin-top: 0px;
+        padding-bottom: 50px;
+    }
+}
+
+
+@media (max-height: 420px) {
+    h1 {
+        font-size: 2.8rem;
+        padding-top: 120px;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .shiba {
+        bottom: 210px;
+        width: 120px;
+    }
+
+    .sparkle {
+        bottom: 340px;
+        left: -65px;
+        width: 50px;
+    }
+
+    header .scrollDown {
+        margin-top: -180px;
     }
 }
