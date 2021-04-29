@@ -733,6 +733,11 @@ textarea {
     width: 100%;
 }
 
+.spamFilter {
+    width: 280px;
+    margin-bottom: 20px;
+}
+
 form button {
     background: #3E6B89;
     border: none;
