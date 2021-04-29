@@ -733,6 +733,10 @@ textarea {
     width: 100%;
 }
 
+.spamFilter {
+    margin-bottom: 20px;
+}
+
 form button {
     background: #3E6B89;
     border: none;
@@ -751,31 +755,6 @@ form button:focus {
 .contact .scrollUp {
     margin-top: -110px;
     padding-bottom: 50px;
-}
-
-
-/* ----------------------------- */
-/*    Contact Section Styling    */
-/* ----------------------------- */
-
-.spamFilter {
-    margin-bottom: 20px;
-}
-
-.rc-anchor-normal {
-    width: 270px;
-}
-
-.rc-anchor-logo-portrait {
-    margin: 10px 0 0 10px;
-}
-.rc-anchor-normal .rc-anchor-pt {
-    text-align:left;
-    width:90px;
-}
-
-.rc-anchor-normal .rc-anchor-content {
-    width: 190px;
 }
 
 
