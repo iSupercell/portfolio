@@ -752,6 +752,11 @@ form button:focus {
     color: #3E6B89;
 }
 
+.notice,
+.emptyNotice {
+    margin-top: 20px;
+}
+
 .contact .scrollUp {
     margin-top: -110px;
     padding-bottom: 50px;
@@ -976,6 +981,10 @@ footer p {
 
     .projectTitle {
         margin-top: 80px;
+    }
+    .project p {
+        height: auto;
+        margin-bottom: 20px;
     }
 
     .toggleArrows {

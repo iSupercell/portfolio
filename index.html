@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Si-Jia Mao • Portfolio</title>
 
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico"/>
+
     <!-- Icon Kits HERE -->
     <script src="https://kit.fontawesome.com/6d162e65a0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
@@ -352,19 +354,21 @@
                         </ul>
                     </nav>
                 </div>
-                <form action="#" method="POST" class="contactForm" name="contactForm" data-netlify="true" data-netlify-recaptcha="true">
+                <form action="/#contact" method="POST" class="contactForm" id="contactForm" name="contactForm" data-netlify="true" data-netlify-recaptcha="true">
                     <div class="userInfo">
                         <label for="userName" class="sr-only">Your Name:</label>
-                        <input type="text" id="userName" name="userName" placeholder="First & last name" required>
+                        <input type="text" id="userName" name="userName" placeholder="First & last name *" required>
                         <label for="userEmail" class="sr-only">Your email:</label>
-                        <input type="email" id="userEmail" name="userEmail" placeholder="hello@email.com" required>
+                        <input type="email" id="userEmail" name="userEmail" placeholder="hello@email.com *" required>
                     </div>
                     <label for="subject" class="sr-only">Your subject (optional):</label>
                     <input type="text" id="subject" name="subject" class="subject" placeholder="Subject (Optional)">
                     <label for="userMessage" class="sr-only">Your message:</label>
-                    <textarea id="userMessage" name="userMessage" placeholder="Message" required></textarea>
+                    <textarea id="userMessage" name="userMessage" placeholder="Message *" required></textarea>
                     <div class="spamFilter" data-netlify-recaptcha="true"></div>
-                    <button type="submit">Send</button>
+                    <button class="sendMessage" type="submit">Send</button>
+                    <p class="notice hide">Thank you! Your message has been received. 💙</p>
+                    <p class="emptyNotice hide">Please fill in all required area before submitting.</p>
                 </form>
             </div>
             <!-- Section Nav related codes start HERE! -->
