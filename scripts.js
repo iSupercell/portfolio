@@ -80,11 +80,38 @@ sjmApp.next.addEventListener('click', () => {
     sjmApp.forward();
 });
 
+
+// -------------------------------
+
+
+// Contact form submit button
+sjmApp.sendBtn = document.querySelector('.sendMessage');
+
+sjmApp.submit = () => {
+    sjmApp.sendBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const form = document.getElementById('contactForm');
+        const name = document.getElementById('userName').value;
+        const email = document.getElementById('userEmail').value;
+        const message = document.getElementById('userMessage').value;
+        const notice = document.querySelector('.notice');
+        const warning = document.querySelector('.emptyNotice');
+        form.reset();
+        if (name && email && message !== '') {
+            notice.classList.remove('hide');
+        } else {
+            warning.classList.remove('hide');
+        }
+    })
+}
+
+
 // Function to help initialize on page load
 sjmApp.init = () => {
     sjmApp.currentProject();
     sjmApp.back();
     sjmApp.forward();
+    sjmApp.submit();
 }
 
 // Call init to start the app
