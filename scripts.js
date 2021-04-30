@@ -130,8 +130,7 @@ sjmApp.mockupChange = () => {
 sjmApp.sendBtn = document.querySelector('.sendMessage');
 
 sjmApp.submit = () => {
-    sjmApp.sendBtn.addEventListener('click', (e) => {
-        e.preventDefault();
+    sjmApp.sendBtn.addEventListener('click', () => {
         const form = document.getElementById('contactForm');
         const name = document.getElementById('userName').value;
         const email = document.getElementById('userEmail').value;
