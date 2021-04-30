@@ -796,8 +796,7 @@ form button:focus {
     color: #3E6B89;
 }
 
-.notice,
-.emptyNotice {
+.notice {
     margin-top: 20px;
 }
 
