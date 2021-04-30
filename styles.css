@@ -504,7 +504,8 @@ header .scrollDown {
 }
 
 .profilePic img {
-    border: 2px solid #999;
+    border: 2px solid;
+    border-color: #3DD2CC #3E6B89 #3E6B89 #3DD2CC;
     width: auto;
 }
 
@@ -601,7 +602,8 @@ header .scrollDown {
 }
 
 .project img {
-    border: 2px solid #3DD2CC;
+    border: 2px solid;
+    border-color: #3DD2CC #3E6B89 #3E6B89 #3DD2CC;
 }
 
 .projectTitle {
