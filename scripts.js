@@ -126,6 +126,7 @@ sjmApp.mockupChange = () => {
 
 // Function to help initialize on page load
 sjmApp.init = () => {
+    sjmApp.mockupChange();
     sjmApp.screen.addEventListener('change', () => {
         sjmApp.mockupChange();
     })

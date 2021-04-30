@@ -441,7 +441,8 @@ h2 {
 }
 
 .imgContainer1,
-.imgContainer2 {
+.imgContainer2,
+.imgContainer3 {
     position: relative;
 }
 
@@ -794,6 +795,13 @@ form button:hover,
 form button:focus {
     background: #3DD2CC;
     color: #3E6B89;
+}
+
+.shiba2 {
+    position: absolute;
+    right: 20px;
+    top: -30px;
+    width: 180px;
 }
 
 .contact .scrollUp {
@@ -1207,6 +1215,12 @@ footer p {
         width: 100%;
     }
 
+    .shiba2 {
+        right: 0px;
+        top: 0px;
+        width: 145px;
+    }
+
     .contact .scrollUp {
         margin-top: 20px;
     }
@@ -1337,6 +1351,10 @@ footer p {
 
     header .scrollDown {
         margin-top: 150px;
+    }
+
+    .shiba2 {
+        right: -15px;
     }
 }
 
