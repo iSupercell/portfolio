@@ -503,7 +503,8 @@ header .scrollDown {
     margin-bottom: 20px;
 }
 
-.profilePic {
+.profilePic img {
+    border: 2px solid #999;
     width: auto;
 }
 
@@ -590,11 +591,17 @@ header .scrollDown {
 .project {
     max-width: 100%;
     width: 780px;
+    position: relative;
+    z-index: 2;
 }
 
 .project,
 .project img {
     margin: 0 auto;
+}
+
+.project img {
+    border: 2px solid #3DD2CC;
 }
 
 .projectTitle {
@@ -609,7 +616,6 @@ h4 {
 
 .links {
     margin: 40px 0 0 20px;
-    z-index: 10;
 }
 
 .project p {
@@ -669,7 +675,6 @@ h4 {
     position: absolute;
     top: 40%;
     width: 100%;
-    z-index: 9;
 }
 
 .arrowLeft,
@@ -680,6 +685,7 @@ h4 {
     cursor: pointer;
     padding: 10px 20px;
     transition: 0.3s ease;
+    z-index: 1;
 }
 
 .arrowLeft:hover,
@@ -937,6 +943,7 @@ footer p {
     .project {
         max-width: 100%;
         width: 700px;
+        z-index: 1;
     }
     
     .project img {
@@ -1129,7 +1136,7 @@ footer p {
     }
 
     .toggleArrows {
-        top: 260px;
+        top: 310px;
     }
 }
 
@@ -1189,7 +1196,7 @@ footer p {
     }
 
     .toggleArrows {
-        top: 230px;
+        top: 270px;
     }
 }
 
@@ -1222,7 +1229,7 @@ footer p {
     }
 
     .toggleArrows {
-        top: 190px;
+        top: 358px;
     }
 }
 
@@ -1288,7 +1295,7 @@ footer p {
     }
 
     .toggleArrows {
-        top: 153px;
+        top: 288px;
     }
 }
 
@@ -1342,7 +1349,7 @@ footer p {
     }
 
     .toggleArrows {
-        top: 130px;
+        top: 243px;
     }
 }
 
