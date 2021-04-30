@@ -124,26 +124,8 @@ sjmApp.mockupChange = () => {
     }
 }
 
-// -------------------------------
-
-// Contact form submit button
-sjmApp.sendBtn = document.querySelector('.sendMessage');
-
-sjmApp.submit = () => {
-    sjmApp.sendBtn.addEventListener('click', () => {
-        const name = document.getElementById('userName').value;
-        const email = document.getElementById('userEmail').value;
-        const message = document.getElementById('userMessage').value;
-        const notice = document.querySelector('.notice');
-        if (name && email && message == '') {
-            notice.classList.remove('hide');
-        }
-    })
-}
-
 // Function to help initialize on page load
 sjmApp.init = () => {
-    sjmApp.submit();
     sjmApp.screen.addEventListener('change', () => {
         sjmApp.mockupChange();
     })
