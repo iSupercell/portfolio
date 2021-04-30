@@ -659,8 +659,8 @@ h4 {
 .dash {
     background: #999;
     cursor: pointer;
-    height: 5px;
-    width: 25px;
+    height: 10px;
+    width: 40px;
     display: inline-block;
     margin: 10px;
     transition: background 0.4s ease;
