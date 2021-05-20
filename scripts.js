@@ -96,21 +96,24 @@ sjmApp.mockupChange = () => {
         `./assets/project02sm.png`,
         `./assets/project03sm.png`,
         `./assets/project04sm.png`,
-        `./assets/project05sm.png`
+        `./assets/project05sm.png`,
+        `./assets/project06sm.png`
     ]
     const mobileMockups = [
         `./assets/project01m.png`,
         `./assets/project02m.png`,
         `./assets/project03m.png`,
         `./assets/project04m.png`,
-        `./assets/project05m.png`
+        `./assets/project05m.png`,
+        `./assets/project06m.png`
     ]
     const regularMockups = [
         `./assets/project01.png`,
         `./assets/project02.png`,
         `./assets/project03.png`,
         `./assets/project04.png`,
-        `./assets/project05.png`
+        `./assets/project05.png`,
+        `./assets/project06.png`
     ]
 
     for (let i = 0; i < sjmApp.totalProject; i++) {

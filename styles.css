@@ -78,7 +78,7 @@ h2,
 .contact,
 .contact .title,
 a {
-    color: #3E6B89;
+    color: #004370;
 }
 
 h3 {
@@ -164,7 +164,7 @@ img {
 .contact .bullet:focus,
 .contact .bullet:active,
 .activeOnLight {
-    background: #3E6B89;
+    background: #004370;
 }
 
 .wrapper {
@@ -361,7 +361,7 @@ img {
 .menu {
     background: none;
     border: none;
-    color: #3E6B89;
+    color: #004370;
     cursor: pointer;
     font-size: 1.8rem;
     outline: none;
@@ -390,7 +390,7 @@ img {
 }
 
 .mobileNav a {
-    border-bottom: 1px solid #3E6B89;
+    border-bottom: 1px solid #004370;
     display: inline-block;
     font-size: 0.7rem;
     letter-spacing: 2px;
@@ -427,7 +427,8 @@ img {
 .mainNav a:hover,
 .mainNav a:focus {
     background: #F5F5F5;
-    border-bottom: 2px solid #3DD2CC;
+    border-bottom: 2px solid #004370;
+    color: #004370;
 }
 
 h1 {
@@ -507,7 +508,7 @@ header .scrollDown {
 
 .profilePic img {
     border: 2px solid;
-    border-color: #3DD2CC #3E6B89 #3E6B89 #3DD2CC;
+    border-color: #3DD2CC #004370 #004370 #3DD2CC;
     width: auto;
 }
 
@@ -545,7 +546,7 @@ header .scrollDown {
 
 .skills h3::after,
 .contact h3::after {
-    border-bottom: 4px solid #3E6B89;
+    border-bottom: 4px solid #004370;
 }
 
 .skills i {
@@ -605,7 +606,7 @@ header .scrollDown {
 
 .project img {
     border: 2px solid;
-    border-color: #3DD2CC #3E6B89 #3E6B89 #3DD2CC;
+    border-color: #3DD2CC #004370 #004370 #3DD2CC;
 }
 
 .projectTitle {
@@ -645,6 +646,7 @@ h4 {
 }
 
 .devTools {
+    height: 52px;
     justify-content: center;
     margin: 30px 0 50px 0;
 }
@@ -756,8 +758,8 @@ input,
 textarea {
     background: #F5F5F5;
     border: none;
-    border-bottom: 1px solid #3E6B89;
-    color: #3E6B89;
+    border-bottom: 1px solid #004370;
+    color: #004370;
     font-size: 0.8rem;
     margin-bottom: 20px;
     outline: none;
@@ -784,7 +786,7 @@ textarea {
 }
 
 form button {
-    background: #3E6B89;
+    background: #004370;
     border: none;
     color: #F5F5F5;
     cursor: pointer;
@@ -795,7 +797,7 @@ form button {
 form button:hover,
 form button:focus {
     background: #3DD2CC;
-    color: #3E6B89;
+    color: #004370;
 }
 
 .shiba2 {
